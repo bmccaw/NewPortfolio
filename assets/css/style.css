@@ -3,3 +3,30 @@ html, body {
     margin: 0;
     padding: 0;
 }
+h1 {
+    font-family: 'Merienda', cursive;
+}
+#nav {
+    display:none;
+}
+#sky {
+    background: rgb(255, 192, 234);
+    /* position:fixed; */
+}
+#page1 {
+    background: #403e75;
+    height:100vh;
+    display:block;
+}
+#page2 {
+    background: #6A67C1;
+    height: 100vh;
+}
+.card-image{
+    height: 200px;
+    overflow: hidden;
+}
+#page3 {
+    background: #1D1C35;
+    height: 100vh;
+}
