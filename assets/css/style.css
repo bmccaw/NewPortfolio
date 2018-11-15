@@ -29,13 +29,28 @@ p {
     border-radius: 10%;
     padding: 5px;
     margin: 5px auto;
-    position: static;
+    position: relative;
 }
 #page1 {
-    /* background: #403e75; */
-    height:100vh;
+    background: url(../images/clouds_on_black.png) no-repeat 0px 0px;
+    background-size: cover;
+    height:200vh;
+    width: 100%;
     display:block;
-    /* position:fixed; */
+    /* position: fixed; */
+    margin-top: 1100px;
+}
+#prlx_layer_1 {
+    position: fixed;
+    background: url(../images/clouds_on_black_mid.png) no-repeat 500px 500px;
+    width: 100%;
+    height: 1100px;
+}
+#prlx_layer_2 {
+    position: fixed;
+    background: url(../images/clouds_on_black_top.png) no-repeat -200px 500px;
+    width: 100%;
+    height: 1500px;
 }
 #bio {
     font-size: 20px;

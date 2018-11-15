@@ -9,6 +9,7 @@
 //     .setPin("#sky") // pins the element for the the scene's duration
 //     .addTo(controller); // assign the scene to the controller
 
+//Sunset Animation on scroll
     var regex = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/,
     sky = document.getElementById("sky"),
     mountainLayers = sky.querySelectorAll("path"),
@@ -16,6 +17,7 @@
     vertHeight = sky.getBoundingClientRect().height,
     sun = document.getElementById("sun");
     
+    //Scroll handler function containing the if/else statement
     function scrollHandler() {
           if (window.scrollY < vertHeight) {
           Array.prototype.forEach.call(mountainLayers, function(layer) { 
@@ -34,3 +36,19 @@
     window.onscroll = function() {
             window.requestAnimationFrame(scrollHandler);
     }
+
+    //Add event listener to confirm pixel value of current scroll
+    window.addEventListener('scroll', function() {
+        document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+        console.log(pageYOffset + 'px');
+      });
+      //Clouds parallax effect for bio section
+    function parallax () {
+        let layerOne = document.getElementById('prlx_layer_1');
+        let layerTwo = document.getElementById('prlx_layer_2');
+        if (window.pageYOffset >= 890){
+            layerOne.style.top = -(window.pageYOffset/12)+ 'px';
+            layerTwo.style.top = -(window.pageYOffset/4)+ 'px';
+        }
+    }
+    window.addEventListener('scroll', parallax, false);
