@@ -6,17 +6,28 @@ html, body {
 h1 {
     font-family: 'Merienda', cursive;
 }
+p {
+    font-family: 'Josefin Sans', sans-serif;
+}
 #nav {
     display:none;
 }
 #sky {
-    background: rgb(255, 192, 234);
-    /* position:fixed; */
+    background: linear-gradient(
+    to bottom, 
+    hsl(320, 100%, 88%), 
+    hsl(21,100%,88%),
+    hsl(46,100%,88%));
+    position:fixed; 
 }
 #page1 {
     background: #403e75;
     height:100vh;
     display:block;
+    /* position:fixed; */
+}
+#bio {
+    font-size: 20px;
 }
 #page2 {
     background: #6A67C1;
@@ -27,6 +38,9 @@ h1 {
     overflow: hidden;
 }
 #page3 {
-    background: #1D1C35;
+    background: #474582;
     height: 100vh;
+}
+#contactInfo {
+    font-size: 20px;
 }
