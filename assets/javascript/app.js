@@ -31,7 +31,6 @@
                 sky.style.transform = "translateY(-"+ (window.scrollY - vertHeight)+"px)";
         }
     }
-    
     window.onscroll = function() {
             window.requestAnimationFrame(scrollHandler);
     }
