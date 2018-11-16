@@ -1,14 +1,3 @@
-// // init controller
-// var introController = new ScrollMagic.Controller();
-
-// // create a scene
-// var sunsetScene = new ScrollMagic.Scene({
-//         duration: 100,    // the scene should last for a scroll distance of 100px
-//         offset: 50    // start this scene after scrolling for 50px
-//     })
-//     .setPin("#sky") // pins the element for the the scene's duration
-//     .addTo(controller); // assign the scene to the controller
-
 //Sunset Animation on scroll
     var regex = /hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)/,
     sky = document.getElementById("sky"),
@@ -42,13 +31,77 @@
         document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
         console.log(pageYOffset + 'px');
       });
-      //Clouds parallax effect for bio section
+    //Clouds parallax effect for bio section
     function parallax () {
+        //grab each parallax div
         let layerOne = document.getElementById('prlx_layer_1');
         let layerTwo = document.getElementById('prlx_layer_2');
+        //if the scroll position is great than or equal to 890px
         if (window.pageYOffset >= 890){
             layerOne.style.top = -(window.pageYOffset/12)+ 'px';
             layerTwo.style.top = -(window.pageYOffset/4)+ 'px';
         }
+        //Clouds just disappear - probably a more elegant way to do this
+        if (window.pageYOffset >=2496.666748046875) {
+            layerOne.style.display = 'none';
+            layerTwo.style.display = 'none';
+        }
+        else if (window.pageYOffset <=2496.666748046875) {
+            layerOne.style.display = 'block';
+            layerTwo.style.display = 'block';
+        }
     }
     window.addEventListener('scroll', parallax, false);
+
+
+//Fireflies using GreenSock
+var fireflies = 50;
+var $container = $("#meadow");
+var $containerWidth = $container.width();
+var $containerHeight = $container.height();
+var master = new TimelineMax();
+
+for (var i = 0; i < fireflies; i++) {
+  var firefly = $('<div class="firefly"></div>');
+  TweenLite.set(firefly, {
+    x: Math.random() * $containerWidth,
+    y: Math.random() * $containerHeight
+  });
+  $container.append(firefly);
+  flyTheFirefly(firefly);
+}
+
+function flyTheFirefly(elm) {
+  var flyTl = new TimelineMax();
+  var fadeTl = new TimelineMax({
+    delay: Math.floor(Math.random() * 2) + 1,
+    repeatDelay: Math.floor(Math.random() * 6) + 1,
+    repeat: -1
+  });
+
+  fadeTl.to(
+    [elm],
+    0.25,
+    { opacity: 0.25, yoyo: true, repeat: 1, repeatDelay: 0.2, yoyo: true },
+    Math.floor(Math.random() * 6) + 1
+  );
+  
+  flyTl
+    .set(elm, {scale: Math.random() * 0.75 + 0.5})
+    .to(elm, Math.random() * 100 + 100, {
+    bezier: {
+      values: [
+        {
+          x: Math.random() * $containerWidth,
+          y: Math.random() * $containerHeight
+        },
+        {
+          x: Math.random() * $containerWidth,
+          y: Math.random() * $containerHeight
+        }
+      ]
+    },
+    onComplete: flyTheFirefly,
+    onCompleteParams: [elm]
+  });
+}

@@ -2,9 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background:black;
 }
 h1 {
     font-family: 'Merienda', cursive;
+    text-align: center;
 }
 p {
     font-family: 'Josefin Sans', sans-serif;
@@ -23,13 +25,25 @@ p {
     hsl(46,100%,88%));
     position:fixed; 
     top: 0;
+    z-index: 8;
 }
 .container {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10%;
     padding: 5px;
-    margin: 5px auto;
+    /* margin: 5px auto; */
     position: relative;
+    top: 50px;
+}
+#p1 {
+    top: 400px;
+}
+#profileImage {
+    display: block;
+    border-radius: 50%;
+    width:200px;
+    height: auto;
+    margin:auto;
 }
 #page1 {
     background: url(../images/clouds_on_black.png) no-repeat 0px 0px;
@@ -38,7 +52,8 @@ p {
     width: 100%;
     display:block;
     /* position: fixed; */
-    margin-top: 1100px;
+    margin-top: 1130px;
+    z-index: 5;
 }
 #prlx_layer_1 {
     position: fixed;
@@ -55,19 +70,70 @@ p {
 #bio {
     font-size: 20px;
 }
-#page2 {
-    /* background: #6A67C1; */
-    height: 100vh;
+#p2p3Wrapper {
+    background: url(../images/forest_silhouette.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#p2 {
+    top:400px;
+}
+#page2 { 
+    height: 200vh;
     display:block;
+    z-index: 1;
 }
 .card-image{
     height: 200px;
     overflow: hidden;
 }
 #page3 {
-    background: #474582;
     height: 100vh;
+}
+.firefly {
+    width:4px;
+    height:4px;
+    position:absolute;
+    background-color: #ecc45e;
+    box-shadow:0px 0px 17px 2px wheat;
+    border-radius: 50%;
+}
+#meadow {
+    height: 40vh;
+    width:100vh;
+    position: relative;
+    margin:130px auto;
 }
 #contactInfo {
     font-size: 20px;
+    text-align: center;
+    top: 80px;
+}
+@-webkit-keyframes fadeout {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+@keyframes fadeout {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+.fadeOut {
+  opacity:0;
+  -moz-animation   : fadeout 1s linear;
+  -webkit-animation: fadeout 1s linear;
+  animation        : fadeout 1s linear;
+}
+@-webkit-keyframes fadein {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes fadein {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+.fadeIn {
+  opacity:1;
+  -moz-animation   : fadein 1s linear;
+  -webkit-animation: fadein 1s linear;
+  animation        : fadein 1s linear;
 }

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--ScrollMagic-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <!--ScrollMagic indicators-->
@@ -70,6 +72,11 @@
                     <h1>Brendan McCaughey</h1>
                 </div>
             </div>
+            <div class="row">
+                    <div class="col s12">
+                        <img src="assets/images/image1.jpeg" id="profileImage">
+                    </div>
+                </div>
             <div class="row">
                 <div class="col s12" id="bio">
                     <p>
@@ -135,9 +142,10 @@
         </div>
     </div>
     <!--Contains portfolio links as clickable links along with Github Info. -->
+    <div id="p2p3Wrapper">
     <div id="page2">
         <a id="portfolio"></a>
-        <div class="container">
+        <div class="container" id="p2">
             <div class="row">
                 <div class="col s12">
                     <h1>My Work</h1>
@@ -151,7 +159,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Solar System<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/Project_1" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Solar System<i class="material-icons right">close</i></span>
@@ -169,7 +177,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Sacred Grove<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/unit-4-game" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Sacred Grove<i class="material-icons right">close</i></span>
@@ -186,7 +194,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Hangman<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/Word-Guess-Game" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Hangman<i class="material-icons right">close</i></span>
@@ -204,7 +212,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Trivia Game<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/Trivia_Game" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Trivia Game<i class="material-icons right">close</i></span>
@@ -220,7 +228,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Train Scheduler<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/Train_Scheduler" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Train Scheduler<i class="material-icons right">close</i></span>
@@ -237,7 +245,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">GiphyAPI<i class="material-icons right">more_horiz</i></span>
-                            <p><a href="#" target="_blank">GitHub</a></p>
+                            <p><a href="https://github.com/bmccaw/GiphyAPI_Project" target="_blank">GitHub</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">GiphyAPI<i class="material-icons right">close</i></span>
@@ -260,12 +268,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s6">
+                <div class="col s12">
                     <p>email: <a href="mailto:brendan.mccaughey@gmail.com">brendan.mccaughey@gmail.com</a></p>
                 </div>
             </div>
             <div class="row">
-                <div class="col s6">
+                <div class="col s12">
                     <a href="https://www.linkedin.com/in/brendan-mccaughey-34297334/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/bmccaw" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://stackoverflow.com/users/10060692/bmccaw" target="_blank"><i class="fab fa-stack-overflow"></i></a>
@@ -274,8 +282,9 @@
                 </div>
             </div>
         </div>
+        <div id="meadow"></div>
     </div>
-
+</div>
 
     <script src="assets/javascript/app.js"></script>
 </body>
