@@ -11,8 +11,22 @@ h1 {
 p {
     font-family: 'Josefin Sans', sans-serif;
 }
+a { 
+    color: green;
+    font-family: 'Josefin Sans', sans-serif;
+}
+a:hover {
+    color:black;
+}
 #nav {
-    display:none;
+    display: block;
+    padding: 5px;
+    margin: 0px auto;
+    z-index: 7;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    height: 30px;
+    width:200px;
 }
 #sunset {
     height: 600px;
@@ -30,7 +44,7 @@ p {
 .container {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10%;
-    padding: 5px;
+    padding: 10px;
     /* margin: 5px auto; */
     position: relative;
     top: 50px;
@@ -51,7 +65,7 @@ p {
     height:200vh;
     width: 100%;
     display:block;
-    /* position: fixed; */
+    /* position: fixed;  */
     margin-top: 1130px;
     z-index: 5;
 }
@@ -81,7 +95,8 @@ p {
 #page2 { 
     height: 200vh;
     display:block;
-    z-index: 1;
+    position: relative;
+    z-index: 8;
 }
 .card-image{
     height: 200px;
@@ -89,6 +104,7 @@ p {
 }
 #page3 {
     height: 100vh;
+    z-index: 8;
 }
 .firefly {
     width:4px;
@@ -109,7 +125,7 @@ p {
     text-align: center;
     top: 80px;
 }
-@-webkit-keyframes fadeout {
+/* @-webkit-keyframes fadeout {
     0% {opacity:1;}
     100% {opacity:0;}
 }
@@ -136,4 +152,4 @@ p {
   -moz-animation   : fadein 1s linear;
   -webkit-animation: fadein 1s linear;
   animation        : fadein 1s linear;
-}
+} */
