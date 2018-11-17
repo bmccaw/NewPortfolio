@@ -27,6 +27,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.7);
     height: 30px;
     width:200px;
+    position: absolute;
 }
 #sunset {
     height: 600px;
@@ -65,9 +66,9 @@ a:hover {
     height:200vh;
     width: 100%;
     display:block;
-    /* position: fixed;  */
+    position: static; 
     margin-top: 1130px;
-    z-index: 5;
+    z-index: 1;
 }
 #prlx_layer_1 {
     position: fixed;
@@ -84,10 +85,13 @@ a:hover {
 #bio {
     font-size: 20px;
 }
-#p2p3Wrapper {
+#p2p3Wrapper { 
     background: url(../images/forest_silhouette.png) no-repeat;
     background-position: center;
     background-size: cover;
+    position:absolute;
+    width: 100%;
+    z-index: 6;
 }
 #p2 {
     top:400px;

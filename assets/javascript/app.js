@@ -41,15 +41,6 @@ function parallax() {
         layerOne.style.top = -(window.pageYOffset / 12) + 'px';
         layerTwo.style.top = -(window.pageYOffset / 4) + 'px';
     }
-    //Clouds just disappear - probably a more elegant way to do this
-    if (window.pageYOffset >= 3000) {
-        layerOne.style.display = 'none';
-        layerTwo.style.display = 'none';
-    }
-    else if (window.pageYOffset <= 3000) {
-        layerOne.style.display = 'block';
-        layerTwo.style.display = 'block';
-    }
 }
 window.addEventListener('scroll', parallax, false);
 
