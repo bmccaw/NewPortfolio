@@ -44,7 +44,7 @@ function parallax() {
 }
 window.addEventListener('scroll', parallax, false);
 
-//navbar
+//navbar using jQuery
 var elementPosition = $('#nav').css('top', 0).offset();
 
 $(window).scroll(function () {
